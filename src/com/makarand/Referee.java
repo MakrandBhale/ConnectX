@@ -23,7 +23,7 @@ public class Referee {
     public void startGame() {
         decidePlayers();
         this.board.printGame();
-
+        this.maxRound = board.boardMatrix.length * board.boardMatrix[0].length;
         while(maxRound > 0) {
             int colNum = input(currentPlayer.playerName + ", what column do you want to put your piece? ");
             if(!board.insertPiece(colNum, this.currentPlayer)) {
